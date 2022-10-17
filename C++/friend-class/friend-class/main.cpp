@@ -15,18 +15,27 @@ class apple{
     
 public:
     
+    static int Count;
+    
     apple(int weight, string color){
         this->weight = weight;
         this->color = color;
+        Count++;
+        id = Count;
     }
-    
+    //лучше сделать через GET
+    void printID(){
+        cout << this->id << endl;
+    }
     
 private:
     int weight;
     string color;
+    int id;
     
 };
 
+int apple::Count = 0;
 
 void human::takeapple(apple &Apple){
     cout << Apple.weight << "\t" << Apple.color << endl;
@@ -40,12 +49,13 @@ void human::changeapple(apple &Apple){
 int main() {
 
     apple a(150,"green");
-    
-    human b;
-    
-    b.takeapple(a);
-    b.changeapple(a);
-    b.takeapple(a);
-    
+    apple c(150,"green");
+    apple q(150,"green");
+    apple w(150,"green");
+  
+    a.printID();
+    c.printID();
+    q.printID();
+    w.printID();
     return 0;
 }
