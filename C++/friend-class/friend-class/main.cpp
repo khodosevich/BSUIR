@@ -15,7 +15,6 @@ class apple{
     
 public:
     
-    static int Count;
     
     apple(int weight, string color){
         this->weight = weight;
@@ -24,11 +23,20 @@ public:
         id = Count;
     }
     //лучше сделать через GET
-    void printID(){
-        cout << this->id << endl;
+    int GetCount(){
+        return  this->id;
+    }
+    
+    static int GetCount(apple &apple){
+        return Count;
+    }
+    
+    static void ChangColor(apple &apple, string color){
+        apple.color = color;
     }
     
 private:
+    static int Count;
     int weight;
     string color;
     int id;
@@ -49,13 +57,22 @@ void human::changeapple(apple &Apple){
 int main() {
 
     apple a(150,"green");
-    apple c(150,"green");
-    apple q(150,"green");
-    apple w(150,"green");
-  
-    a.printID();
-    c.printID();
-    q.printID();
-    w.printID();
+//    apple c(150,"green");
+//    apple q(150,"green");
+//    apple w(150,"green");
+//
+//    cout << a.GetCount() << endl;
+//    cout << c.GetCount() << endl;
+//    cout << q.GetCount() << endl;
+//    cout << w.GetCount() << endl;
+    
+    human b;
+    
+    b.takeapple(a);
+    
+    a.ChangColor(a, "red");
+    
+    b.takeapple(a);
+    
     return 0;
 }
