@@ -1,0 +1,3 @@
+/Users/khodosevich/BSUIR/LB 3sem/LB6/cmake-build-debug/CMakeFiles/LB6.dir
+/Users/khodosevich/BSUIR/LB 3sem/LB6/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/khodosevich/BSUIR/LB 3sem/LB6/cmake-build-debug/CMakeFiles/rebuild_cache.dir
