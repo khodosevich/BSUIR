@@ -1,2 +1,2 @@
-# secondcourse
+# BSUIR
 ВМСИС 
