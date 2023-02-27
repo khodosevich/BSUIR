@@ -7,84 +7,84 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.SecretKeySpec;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.nio.charset.Charset;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
+import java.util.logging.Logger;
 
 @RestController
 public class StartControllers {
 
+    private static final Logger logger = Logger.getLogger(StartControllers.class.getName());
+    private static final int key = 3;
+
     @GetMapping("/encrypt")
     public String ecryption(@RequestParam("string") String string,
-                            @RequestParam("operation") boolean operation) throws NoSuchPaddingException,
-            IllegalBlockSizeException, NoSuchAlgorithmException,
-            BadPaddingException, InvalidKeyException, JSONException, IOException, URLArgumentsException {
+                            @RequestParam("operation") boolean operation) throws  JSONException, URLArgumentsException {
 
-
-
-        final String key = "knowledgefactory";
-        String result;
+        String result = "";
 
         if (operation) {
             checkSrting(string);
-            result = encrypt(string, key);
+            result = encrypt(string);
         } else {
-            result = decrypt(string, key);
+            result = decrypt(string);
         }
+
 
         JSONObject obj = new JSONObject();
 
         obj.put("result: ", result);
+
+
+        logger.info("good");
 
         return obj.toString();
 
     }
 
 
-    public static String encrypt(String password, String key) throws
-            NoSuchAlgorithmException, NoSuchPaddingException,
-            InvalidKeyException, IllegalBlockSizeException,
-            BadPaddingException, UnsupportedEncodingException {
+    public static String encrypt(String wordToEncrypt){
 
-        byte[] KeyData = key.getBytes();
+        char []arr = new char[wordToEncrypt.length()];
 
-        SecretKeySpec KS = new SecretKeySpec(KeyData, "Blowfish");
+        for (int i = 0; i < wordToEncrypt.length(); i++) {
+            if( Character.isLetter(wordToEncrypt.charAt(i)) && Character.isUpperCase(wordToEncrypt.charAt(i)) ){
+                arr[i] = (char) (((((int) (wordToEncrypt.charAt(i))) - 65 + key) % 26) + 65);
+            }
+            else if(Character.isLetter(wordToEncrypt.charAt(i)) && Character.isLowerCase(wordToEncrypt.charAt(i))){
+                arr[i] = (char) (((((int) (wordToEncrypt.charAt(i))) - 97 + key) % 26) + 97);
+            }
+            else{
+                arr[i] = wordToEncrypt.charAt(i);
+            }
+        }
 
-        Cipher cipher = Cipher.getInstance("Blowfish");
-        cipher.init(Cipher.ENCRYPT_MODE, KS);
+        String newWord =  String.copyValueOf(arr);
 
-        String encryptedtext = Base64.getEncoder().
-                encodeToString(cipher.doFinal(password.getBytes("UTF-8")));
-
-        return encryptedtext;
+        return newWord;
     }
 
-    public static String decrypt(String encryptedtext, String key)
-            throws NoSuchAlgorithmException, NoSuchPaddingException,
-            InvalidKeyException, IllegalBlockSizeException,
-            BadPaddingException {
+    public static String decrypt(String encryptedtext) {
 
-        byte[] KeyData = key.getBytes();
+        char []arr = new char[encryptedtext.length()];
 
-        SecretKeySpec KS = new SecretKeySpec(KeyData, "Blowfish");
+        for (int i = 0; i < encryptedtext.length(); i++) {
 
-        byte[] ecryptedtexttobytes = Base64.getDecoder().decode(encryptedtext);
+            if( Character.isLetter(encryptedtext.charAt(i)) && Character.isUpperCase(encryptedtext.charAt(i)) ){
+                arr[i] = (char) (((((int) (encryptedtext.charAt(i))) - 65 - key) % 26) + 65);
+            }
 
-        Cipher cipher = Cipher.getInstance("Blowfish");
-        cipher.init(Cipher.DECRYPT_MODE, KS);
+            else if(Character.isLetter(encryptedtext.charAt(i)) && Character.isLowerCase(encryptedtext.charAt(i))){
+                arr[i] = (char) (((((int) (encryptedtext.charAt(i))) - 97 - key) % 26) + 97);
+            }
+            else{
+                arr[i] = encryptedtext.charAt(i);
+            }
 
-        byte[] decrypted = cipher.doFinal(ecryptedtexttobytes);
-        String decryptedString = new String(decrypted, Charset.forName("UTF-8"));
+        }
 
-        return decryptedString;
+        String newWord =  String.copyValueOf(arr);
+
+        return newWord;
+
 
     }
 
@@ -94,13 +94,10 @@ public class StartControllers {
         char []strToChars = str.toCharArray();
 
         for (int i = 0 ; i < strToChars.length ; i++){
-            if(strToChars[i] >= '1' && strToChars[i] <= '9'){
+            if(strToChars[i] >= '0' && strToChars[i] <= '9'){
                 throw new URLArgumentsException("You entered numbers!");
             }
         }
-
         return true;
     }
-
-
 }
