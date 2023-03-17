@@ -10,7 +10,7 @@ public class EncryptService {
 
     private static final Logger logger = Logger.getLogger(StartControllers.class.getName());
 
-    public static String encrypt(String text , int n ) {
+    public static String encrypt(String text, int n) {
 
         if (n <= 0 || text == null || text.isEmpty()) {
             logger.info("Word cant encrypt!");
@@ -33,7 +33,7 @@ public class EncryptService {
     }
 
     public static String decrypt(final String encryptedText, int n) {
-        if (n <= 0 || encryptedText == null ||  encryptedText.isEmpty()) {
+        if (n <= 0 || encryptedText == null || encryptedText.isEmpty()) {
             logger.info("Word cant decrypt!");
             return encryptedText;
         }

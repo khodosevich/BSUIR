@@ -13,9 +13,9 @@ public class URLArgumentsException extends Exception {
 
     private static final Logger logger = LogManager.getLogger(StartControllers.class.getName());
 
-    public URLArgumentsException(String message){
+    public URLArgumentsException(String message) {
         super(message);
-        logger.error("exception:" + message );
+        logger.error("exception:" + message);
     }
 
 }
