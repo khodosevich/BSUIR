@@ -1,11 +1,11 @@
 package com.example.encryption.controllers;
 
 public class Result {
-    public String Value;
-    public int Counter;
+    public String value;
+    public int counter;
     public Result(String value,int counter) {
-        Value = value;
-        Counter = counter;
+        value = value;
+        counter = counter;
     }
 
 
