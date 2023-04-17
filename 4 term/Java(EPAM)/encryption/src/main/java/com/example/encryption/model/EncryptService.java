@@ -1,14 +1,20 @@
 package com.example.encryption.model;
 
 
-import com.example.encryption.controllers.StartControllers;
+import com.example.encryption.controllers.EncryptionControllers;
 import com.example.encryption.exceptions.URLArgumentsException;
+import org.springframework.stereotype.Component;
 
 import java.util.logging.Logger;
 
+@Component
 public class EncryptService {
 
-    private static final Logger logger = Logger.getLogger(StartControllers.class.getName());
+    private static final Logger logger = Logger.getLogger(EncryptionControllers.class.getName());
+
+    public EncryptService(){
+
+    }
 
     public static String encrypt(String text, int n) {
 

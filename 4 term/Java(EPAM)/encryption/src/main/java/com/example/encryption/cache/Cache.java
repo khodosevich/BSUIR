@@ -2,12 +2,11 @@ package com.example.encryption.cache;
 
 import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Component
 public class Cache<K, V> {
-    Map<K, V> cache = new HashMap<K, V>();
+    Map<K, V> cache = new HashMap< K , V>();
 
     public boolean contains(K key) {
         return cache.containsKey(key);

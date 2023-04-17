@@ -1,12 +1,13 @@
 package com.example.encryption.controllers;
 
-import com.example.encryption.PostgreSQL.PostgreSQL;
+import com.example.encryption.async.ResultAsync;
 import com.example.encryption.cache.Cache;
 import com.example.encryption.calculation.Calculation;
 import com.example.encryption.counter.Counter;
 import com.example.encryption.counter.CounterThread;
 import com.example.encryption.exceptions.URLArgumentsException;
 import com.example.encryption.model.Result;
+import com.example.encryption.service.EncryptionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,17 +19,21 @@ import java.util.logging.Logger;
 import static com.example.encryption.model.EncryptService.*;
 
 @RestController
-public class StartControllers {
+public class EncryptionControllers {
 
     private final Cache<String, String> cache;
     private final Calculation calculation;
-    private static final Logger logger = Logger.getLogger(StartControllers.class.getName());
-
+    private static final Logger logger = Logger.getLogger(EncryptionControllers.class.getName());
+    private final ResultAsync resultAsync;
+    private final EncryptionService encryptionService;
 
     @Autowired
-    public StartControllers(Cache<String, String> cache, Calculation calculation) {
+    public EncryptionControllers(Cache<String, String> cache, Calculation calculation, ResultAsync resultAsync, EncryptionService encryptionService) {
         this.cache = cache;
         this.calculation = calculation;
+        this.resultAsync = resultAsync;
+        this.encryptionService = encryptionService;
+
     }
 
     @GetMapping("/encrypt")
@@ -72,15 +77,18 @@ public class StartControllers {
 
         logger.info("program end!");
 
-        Result result1 = new Result(result, Counter.getCounter());
+        Result result1 = new Result(string,result);
 
-        return ResponseEntity.ok(result1);
+        encryptionService.save(result1);
+
+        return ResponseEntity.ok(result1 + "\nCounter: " + Counter.getCounter());
 
     }
 
     @PostMapping("/encrypt")
     public ResponseEntity<?> bulkEncrypt(@RequestBody List<String> listOfString) {
         List<String> resultList = listOfString.stream().map(x -> encrypt(x, 1)).toList();
+
 
         int max = calculation.findMax(listOfString);
         int min = calculation.findMin(listOfString);
@@ -102,8 +110,22 @@ public class StartControllers {
         CounterThread threadCounter = new CounterThread();
         threadCounter.start();
 
-        Result result = new Result("hello", Counter.getCounter());
-
-        return ResponseEntity.ok(result);
+        return ResponseEntity.ok(Counter.getCounter());
     }
+
+
+    @PostMapping("/async")
+    public Integer method(@RequestBody Result result) throws URLArgumentsException {
+        checkSrting(result.getCode());
+        int id = resultAsync.createAsync(result);
+        resultAsync.computeAsync(id);
+
+        return id;
+    }
+
+    @GetMapping("/result/{id}")
+    public Result result(@PathVariable("id") int id){
+        return encryptionService.findOne(id);
+    }
+
 }
