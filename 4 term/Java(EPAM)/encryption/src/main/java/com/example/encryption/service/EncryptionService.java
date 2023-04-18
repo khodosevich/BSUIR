@@ -1,6 +1,5 @@
 package com.example.encryption.service;
 
-
 import com.example.encryption.model.Result;
 import com.example.encryption.repositories.ResultRepository;
 import jakarta.transaction.Transactional;

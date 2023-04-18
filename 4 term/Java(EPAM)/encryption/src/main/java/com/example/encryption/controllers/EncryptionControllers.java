@@ -114,16 +114,16 @@ public class EncryptionControllers {
     }
 
 
-    @PostMapping("/async")
+    @PostMapping("/createNewDecode")
     public Integer method(@RequestBody Result result) throws URLArgumentsException {
         checkSrting(result.getCode());
-        int id = resultAsync.createAsync(result);
+        int id = resultAsync.createHalfEmptyModel(result);
         resultAsync.computeAsync(id);
 
         return id;
     }
 
-    @GetMapping("/result/{id}")
+    @GetMapping("/find/{id}")
     public Result result(@PathVariable("id") int id){
         return encryptionService.findOne(id);
     }

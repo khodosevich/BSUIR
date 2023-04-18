@@ -11,10 +11,7 @@ import java.util.logging.Logger;
 public class EncryptService {
 
     private static final Logger logger = Logger.getLogger(EncryptionControllers.class.getName());
-
-    public EncryptService(){
-
-    }
+    public EncryptService(){}
 
     public static String encrypt(String text, int n) {
 

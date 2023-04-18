@@ -1,7 +1,5 @@
 package com.example.encryption.async;
 
-
-import com.example.encryption.calculation.Calculation;
 import com.example.encryption.model.EncryptService;
 import com.example.encryption.model.Result;
 import com.example.encryption.service.EncryptionService;
@@ -16,13 +14,13 @@ public class ResultAsync {
     public final EncryptService encryptService;
 
     @Autowired
-    public ResultAsync(EncryptionService resultSerivce,EncryptService encryptService){
-        this.resultService = resultSerivce;
+    public ResultAsync(EncryptionService resultService,EncryptService encryptService){
+        this.resultService = resultService;
         this.encryptService = encryptService;
     }
 
 
-    public int createAsync(Result result){
+    public int createHalfEmptyModel(Result result){
         Result result1 = new Result();
 
         result1.setCode(result.getCode());
