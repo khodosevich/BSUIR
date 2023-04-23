@@ -40,10 +40,13 @@ public class EncryptionControllers {
     public ResponseEntity<?> ecryption(@RequestParam("string") String string,
                                        @RequestParam("operation") boolean operation) throws URLArgumentsException {
 
+        logger.info("check string");
+        checkSrting(string);
+
         CounterThread threadCounter = new CounterThread();
         threadCounter.start();
 
-        String result = "";
+        String result;
 
         logger.info("Work cache!");
 
@@ -53,8 +56,7 @@ public class EncryptionControllers {
 
         if (operation) {
             if (!cache.contains(string)) {
-                logger.info("check string");
-                checkSrting(string);
+
                 logger.info("encrypt start");
                 result = encrypt(string, 1);
             } else {
@@ -78,6 +80,8 @@ public class EncryptionControllers {
         logger.info("program end!");
 
         Result result1 = new Result(string,result);
+
+
 
         encryptionService.save(result1);
 
@@ -115,12 +119,37 @@ public class EncryptionControllers {
 
 
     @PostMapping("/createNewDecode")
-    public Integer method(@RequestBody Result result) throws URLArgumentsException {
+    public Integer methodDecode(@RequestBody Result result) throws URLArgumentsException {
         checkSrting(result.getCode());
-        int id = resultAsync.createHalfEmptyModel(result);
-        resultAsync.computeAsync(id);
 
-        return id;
+        Result result1 = encryptionService.findOneByCode(result.getCode());
+
+        if(result1 == null){
+            int id = resultAsync.createHalfEmptyModel(result);
+            resultAsync.computeAsync(id);
+            return id;
+        }
+        else{
+            return result1.getId();
+        }
+
+    }
+
+    @PostMapping("/createNewCode")
+    public Integer methodCode(@RequestBody Result result) throws URLArgumentsException {
+        checkSrting(result.getDecode());
+
+        Result result1 = encryptionService.findOneByDecode(result.getDecode());
+
+        if(result1 == null){
+            int id = resultAsync.createHalfEmptyModelToDecode(result);
+            resultAsync.computeAsyncSecond(id);
+            return id;
+        }
+        else{
+            return result1.getId();
+        }
+
     }
 
     @GetMapping("/find/{id}")

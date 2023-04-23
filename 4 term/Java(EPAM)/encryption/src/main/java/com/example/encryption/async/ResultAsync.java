@@ -29,11 +29,19 @@ public class ResultAsync {
         return result1.getId();
     }
 
+    public int createHalfEmptyModelToDecode(Result result){
+        Result result1 = new Result();
+
+        result1.setDecode(result.getDecode());
+        resultService.save(result1);
+
+        return result1.getId();
+    }
+
     public CompletableFuture<Integer> computeAsync(int id){
         return CompletableFuture.supplyAsync(() ->{
            try{
                Result result = resultService.findOne(id);
-
                Thread.sleep(15000);
                result.setDecode(EncryptService.encrypt(result.getCode(),1));
 
@@ -42,6 +50,15 @@ public class ResultAsync {
            } catch (InterruptedException e) {
                throw new RuntimeException(e);
            }
+        });
+    }
+
+    public CompletableFuture<Integer> computeAsyncSecond(int id){
+        return CompletableFuture.supplyAsync(() ->{
+                Result result = resultService.findOne(id);
+                result.setCode(EncryptService.decrypt(result.getDecode(),1));
+                resultService.save(result);
+                return result.getId();
         });
     }
 

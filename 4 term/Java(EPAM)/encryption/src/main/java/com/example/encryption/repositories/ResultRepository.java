@@ -7,4 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ResultRepository extends JpaRepository<Result,Integer> {
 
+    public Result findByCode(String code);
+    public Result findByDecode(String decode);
+
 }

@@ -16,7 +16,7 @@ public class Result {
     public Result(){
     }
 
-    @Column(name = "code")
+    @Column(name = "code")//original
     private String code;
     @Column(name = "decode")
     private String decode;
@@ -37,4 +37,14 @@ public class Result {
     public String getCode() {return code;}
 
     public String getDecode() {return decode;}
+
+
+    @Override
+    public String toString() {
+        return "Result{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", decode='" + decode + '\'' +
+                '}';
+    }
 }
