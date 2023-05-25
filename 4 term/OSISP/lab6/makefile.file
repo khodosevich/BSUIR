@@ -1,0 +1,13 @@
+all: sort generate print
+
+sort: sort.o
+	gcc -o sort sort.o
+
+generate: generate.o
+	gcc -o generate generate.o
+
+print: print.o
+	gcc -o print print.o
+
+clean:
+	rm -f sort sort.o generate generate.o print print.o
