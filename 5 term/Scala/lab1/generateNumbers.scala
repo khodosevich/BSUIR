@@ -103,15 +103,18 @@ object Variant2  {
 
       z += c
 
+      if(z < 0 ){
+        z *= -1;
+      }
+
       if(z.toString.length > 11) z = z.toString.substring(0,10).toLong;
 
 
       println(s"\na = ${a}  b = ${b}   c = ${c}  rez = ${rez} z = ${z}" );
 
-      numberString = "011" + z
-      numberString = numberString.substring(0,10)
 
-      println(numberString)
+      numberString = "011" + z
+      numberString = numberString.substring(0, 11)
 
     }
   }
