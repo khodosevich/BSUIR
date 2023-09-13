@@ -1,0 +1,12 @@
+.vs/
+Common/bin/
+Common/obj/
+
+lab1/bin/
+lab1/obj/
+
+Reader/bin/
+Reader/obj/
+
+Writer/bin/
+Writer/obj/
