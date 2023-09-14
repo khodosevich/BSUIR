@@ -16,26 +16,21 @@ object Variant1 {
       numberString.substring(0,10)
     }
 
-    val isNumeric = numberString.matches("^[0-9]+$")
-
-    if (!isNumeric) {
-      println("Строка содержит символы, отличные от цифр.")
-      sys.exit(0)
-    }
-
     for (i <- 1 to 10) {
       a = numberString.substring(0, 5).toInt
-      //println(numberString.length());
 
       b=  numberString.substring(5, 10).toInt
       c= a*b
       rez=c.toString().substring(0,3).toFloat / 1000
       z+=c
 
+      if (z < 0) {
+        z *= -1;
+      }
+
       println(s"\na = ${a}  b = ${b}   c =  ${c}  rez =  ${rez} z = ${z}" );
       numberString= numberString.substring(1,numberString.length()-1)
       numberString="011" + z
-
     }
   }
 }
@@ -73,12 +68,6 @@ object Variant2  {
       numberStr.substring (0, 10)
     }
 
-      val isNumeric = numberStr.matches ("^[0-9]+$")
-
-      if (! isNumeric) {
-      println ("Строка содержит символы.")
-      sys.exit (0)
-     }
       numberStr
   }
 
@@ -91,7 +80,6 @@ object Variant2  {
     var z : Long = 0
 
     var numberString: String = inputNumber();
-
 
     for (i <- 1 to 5) {
       a = substringFromSymbolsAtEvenPositions(numberString).toLong
@@ -109,13 +97,10 @@ object Variant2  {
 
       if(z.toString.length > 11) z = z.toString.substring(0,10).toLong;
 
-
       println(s"\na = ${a}  b = ${b}   c = ${c}  rez = ${rez} z = ${z}" );
-
 
       numberString = "011" + z
       numberString = numberString.substring(0, 11)
-
     }
   }
 }
