@@ -1,3 +1,6 @@
+
+import scala.util.Random
+
 object Variant1 {
   def main(args: Array[String]): Unit = {
     print("Enter the number: ")
@@ -71,6 +74,27 @@ object Variant2  {
       numberStr
   }
 
+
+  def generateRandomNumber() = {
+
+    val random = new Random();
+    var generatedNumbers = Set[Int]()
+
+
+    while (generatedNumbers.size < 15) {
+      val randomNumber = random.nextInt(100)
+
+      if (!generatedNumbers.contains(randomNumber)) {
+        generatedNumbers += randomNumber
+      }
+    }
+
+    println("Полученные числа:")
+    println(generatedNumbers)
+
+  }
+
+
   def main(args: Array[String]): Unit = {
 
     var a: Long = 0
@@ -101,6 +125,10 @@ object Variant2  {
 
       numberString = "011" + z
       numberString = numberString.substring(0, 11)
+
     }
+
+//     generateRandomNumber();
+
   }
 }
