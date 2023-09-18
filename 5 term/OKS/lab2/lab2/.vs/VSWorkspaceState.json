@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Common",
+    "\\Common\\Coders",
+    "\\Common\\Extensions",
+    "\\lab1",
+    "\\Reader",
+    "\\Reader\\obj",
+    "\\Reader\\obj\\Debug",
+    "\\Reader\\obj\\Debug\\net7.0",
+    "\\Writer"
+  ],
+  "SelectedNode": "\\Reader\\ReaderPort.cs",
+  "PreviewInSolutionExplorer": false
+}
