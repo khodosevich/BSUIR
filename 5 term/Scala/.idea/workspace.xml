@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="904286b3-f461-4233-8b1a-17f1113b5a27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/StudyBasicScala/src/main/scala/Demo/Hello.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudyBasicScala/src/main/scala/Demo/ValuesAndTypes.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab2/containsSquareRec_task4.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab2/findClosestToAvrIndex_task3.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab2/hasThreeDifferentElementsRec_task5.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab2/sumEvenNumber_task2.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab2/sumList_task1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/lab2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/lab2.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/ОТЧЕТ(LB2).docx" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/ОТЧЕТ(LB2).docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +31,14 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
   <component name="ProjectId" id="2Usv61bAzAIMcXDp3S9WXwzkyoO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -34,11 +47,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/khodosevich/BSUIR/5 term/Scala/StudyBasicScala/src/main/scala/Demo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -79,6 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1693740924050</updated>
       <workItem from="1693740925791" duration="405000" />
+      <workItem from="1695890724734" duration="12058000" />
     </task>
     <servers />
   </component>

@@ -1,69 +1,111 @@
 object Lab2 {
 
-
-  def summaList( list : List[Double]) = {
-
-    var result = 0.0;
-
-    var list1 = list.filter(x => Math.abs(x) <= 5)
-
-    list1.map(el => result = result + el);
-
-    result
-  }
-
-  def summaEvenNumber( list : List[Double]) = {
-
-    var res = 0.0
-    for (i <- list.indices if i % 2 == 0) {
-        res = res + list(i)
-    }
+  def sumList(list: List[Double]): Double = {
+    var res = 0.0;
+    if (list.isEmpty) 0.0
+    else res = list.head + sumList(list.tail)
     res
   }
 
-  def findClosestNumber(list: List[Double], target: Double): Double = {
-    val index = list.indexOf(list.minBy(x => Math.abs(x - target)))
-    index
-  }
+  def filterList(list: List[Double]) = {
 
-  def indexAverageNumber(list: List[Double]) = {
+    if (list.isEmpty) {
+      throw new IllegalArgumentException("Список пуст")
+    }
 
-    var res: Double = 0
-    var average: Double = 0
-
-    list.map(el => res = res + el)
-
-    average = res / list.size
-
-    val index = findClosestNumber(list,average)
-
-    index
+    var list1 = list.filter(x => Math.abs(x) <= 5)
+    val result = sumList(list1)
+    result
   }
 
 
-  def containsSquare(list: List[Double]): Boolean = {
-    list.exists(x => list.contains(x * x))
+  def summaEvenNumber(list: List[Double], index: Int = 0, result: Double = 0): Double = {
+
+    if (list.isEmpty) {
+      throw new IllegalArgumentException("Список пуст")
+    }
+
+    if (index >= list.length) result
+    else if (index % 2 == 0) summaEvenNumber(list, index + 1, result + list(index))
+    else summaEvenNumber(list, index + 1, result)
   }
 
 
-  def checkNumberOnDiffentValues(list: List[Double]): Boolean = {
+  def findClosestToAverageIndex(list: List[Double]): Int = {
+    if (list.isEmpty) {
+      throw new IllegalArgumentException("Список пуст")
+    }
 
+    val average = list.sum / list.length
+
+    val closestElement = list.minBy(element => Math.abs(element - average))
+    list.indexOf(closestElement)
+  }
+
+  def containsSquareRec(list: List[Double]): Boolean = {
+    if (list.isEmpty) {
+      false
+    }
+    else {
+      val currentElement = list.head
+      if (Math.sqrt(currentElement) % 1 == 0) {
+        true
+      }
+      else {
+        containsSquareRec(list.tail)
+      }
+    }
+  }
+
+
+  def hasThreeDifferentElementsRec(list: List[Double], uniqueElements: Set[Double] = Set.empty, count: Int = 0): Boolean = {
+    if (count >= 3) {
+      true
+    } else if (list.isEmpty) {
+      false
+    } else {
+      val currentElement = list.head
+      val updatedSet = uniqueElements + currentElement
+      val updatedCount = if (uniqueElements.contains(currentElement)) count else count + 1
+
+      hasThreeDifferentElementsRec(list.tail, updatedSet, updatedCount)
+    }
+  }
+
+
+  def printMenu(): Unit = {
+    print("\n1 - Cумма элементов списка по модулю меньше 5")
+    print("\n2 - Cумма каждого второго элемента")
+    print("\n3 - Индекс элемента, наименее отклоняющегося от среднего значения")
+    print("\n4 - Cписок содержит квадрат одного из своих элементов")
+    print("\n5 - Проверки на наличие трех разных элементов в списке")
+    print("\n6 - Вывод спика")
+    print("\n0 - Завершение программы\n")
   }
 
   def main(args: Array[String]): Unit = {
 
-    var list =  List[Double](5.0,1.0,7.0,7.0,1.0)
-    println(s"\nCумма элементов списка по модулю меньше 5: ${summaList(list)}" )
+    var list = List[Double](1.0, 2.0, 3, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0);
+    var x = 100
 
-    var list1 = List[Double](1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,9.0)
+    println(s"Cписок: ${list.toList}")
 
-    println(s"\nCумма каждого второго элемента: ${summaEvenNumber(list1)}")
+    while (x != 0) {
 
-    println(s"\nИндекс элемента, наименее отклоняющегося от среднего значения: ${indexAverageNumber(list)}");
+      printMenu()
 
-    println(s"\nCписок содержит квадрат одного из своих элементов: ${containsSquare(list1)}")
+      var choice = scala.io.StdIn.readInt()
 
-    println(s"\nПроверки на наличие трех разных элементов в списке: ${checkNumberOnDiffentValues(list1)}")
-
+      choice match {
+        case 1 => println(s"Cумма элементов списка по модулю меньше 5: ${filterList(list)}")
+        case 2 => println(s"Cумма каждого второго элемента: ${summaEvenNumber(list)}")
+        case 3 => println(s"Индекс элемента, наименее отклоняющегося от среднего значения:${findClosestToAverageIndex(list)} ")
+        case 4 => println(s"Cписок содержит квадрат одного из своих элементов: ${containsSquareRec(list)} ")
+        case 5 => println(s"Проверки на наличие трех разных элементов в списке: ${hasThreeDifferentElementsRec(list)}")
+        case 6 => println(s"Cписок: ${list.toList}")
+        case 0 => x = 0
+        case _ => println("Некорректный выбор. Введите число от 0 до 8.")
+      }
+    }
   }
 }
