@@ -1,16 +1,21 @@
 object Main3 {
 
   def findClosestToAverageIndexRec(list: List[Double], currentIndex: Int = 0, closestIndex: Int = 0, minDiff: Double = Double.MaxValue, average: Double = 0): Int = {
-    if (currentIndex >= list.length) closestIndex
-    else {
-      val currentElement = list(currentIndex)
-      val diff = Math.abs(currentElement - average)
-      if (diff < minDiff) {
-        findClosestToAverageIndexRec(list, currentIndex + 1, currentIndex, diff, average)
-      } else if (diff == minDiff && currentElement < list(closestIndex)) {
-        findClosestToAverageIndexRec(list, currentIndex + 1, currentIndex, diff, average)
-      } else {
-        findClosestToAverageIndexRec(list, currentIndex + 1, closestIndex, minDiff, average)
+
+    if (list.isEmpty) {
+      throw new IllegalArgumentException("Список пуст")
+    }else{
+      if (currentIndex >= list.length) closestIndex
+      else {
+        val currentElement = list(currentIndex)
+        val diff = Math.abs(currentElement - average)
+        if (diff < minDiff) {
+          findClosestToAverageIndexRec(list, currentIndex + 1, currentIndex, diff, average)
+        } else if (diff == minDiff && currentElement < list(closestIndex)) {
+          findClosestToAverageIndexRec(list, currentIndex + 1, currentIndex, diff, average)
+        } else {
+          findClosestToAverageIndexRec(list, currentIndex + 1, closestIndex, minDiff, average)
+        }
       }
     }
   }
