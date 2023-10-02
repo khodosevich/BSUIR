@@ -1,0 +1,72 @@
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\lab1.exe
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\lab1.deps.json
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\lab1.runtimeconfig.json
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\lab1.dll
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\lab1.pdb
+D:\BSUIR\5 term\ОКС\lab1\lab1\obj\Debug\net7.0\lab1.csproj.AssemblyReference.cache
+D:\BSUIR\5 term\ОКС\lab1\lab1\obj\Debug\net7.0\lab1.GeneratedMSBuildEditorConfig.editorconfig
+D:\BSUIR\5 term\ОКС\lab1\lab1\obj\Debug\net7.0\lab1.AssemblyInfoInputs.cache
+D:\BSUIR\5 term\ОКС\lab1\lab1\obj\Debug\net7.0\lab1.AssemblyInfo.cs
+D:\BSUIR\5 term\ОКС\lab1\lab1\obj\Debug\net7.0\lab1.csproj.CoreCompileInputs.cache
+D:\BSUIR\5 term\ОКС\lab1\lab1\obj\Debug\net7.0\lab1.dll
+D:\BSUIR\5 term\ОКС\lab1\lab1\obj\Debug\net7.0\refint\lab1.dll
+D:\BSUIR\5 term\ОКС\lab1\lab1\obj\Debug\net7.0\lab1.pdb
+D:\BSUIR\5 term\ОКС\lab1\lab1\obj\Debug\net7.0\lab1.genruntimeconfig.cache
+D:\BSUIR\5 term\ОКС\lab1\lab1\obj\Debug\net7.0\ref\lab1.dll
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\System.IO.Ports.dll
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\runtimes\unix\lib\net7.0\System.IO.Ports.dll
+D:\BSUIR\5 term\ОКС\lab1\lab1\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.IO.Ports.dll
+D:\BSUIR\5 term\ОКС\lab1\lab1\obj\Debug\net7.0\lab1.csproj.CopyComplete
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\lab1.exe
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\lab1.deps.json
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\lab1.runtimeconfig.json
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\lab1.dll
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\lab1.pdb
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\System.IO.Ports.dll
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\runtimes\unix\lib\net7.0\System.IO.Ports.dll
+C:\Users\khodosevich\stas\lab1\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.IO.Ports.dll
+C:\Users\khodosevich\stas\lab1\obj\Debug\net7.0\lab1.csproj.AssemblyReference.cache
+C:\Users\khodosevich\stas\lab1\obj\Debug\net7.0\lab1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\khodosevich\stas\lab1\obj\Debug\net7.0\lab1.AssemblyInfoInputs.cache
+C:\Users\khodosevich\stas\lab1\obj\Debug\net7.0\lab1.AssemblyInfo.cs
+C:\Users\khodosevich\stas\lab1\obj\Debug\net7.0\lab1.csproj.CoreCompileInputs.cache
+C:\Users\khodosevich\stas\lab1\obj\Debug\net7.0\lab1.csproj.CopyComplete
+C:\Users\khodosevich\stas\lab1\obj\Debug\net7.0\lab1.dll
+C:\Users\khodosevich\stas\lab1\obj\Debug\net7.0\refint\lab1.dll
+C:\Users\khodosevich\stas\lab1\obj\Debug\net7.0\lab1.pdb
+C:\Users\khodosevich\stas\lab1\obj\Debug\net7.0\lab1.genruntimeconfig.cache
+C:\Users\khodosevich\stas\lab1\obj\Debug\net7.0\ref\lab1.dll
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\lab1.exe
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\lab1.deps.json
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\lab1.runtimeconfig.json
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\lab1.dll
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\lab1.pdb
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\System.IO.Ports.dll
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\runtimes\unix\lib\net7.0\System.IO.Ports.dll
+C:\Users\khodosevich\matvey\lab1\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.IO.Ports.dll
+C:\Users\khodosevich\matvey\lab1\obj\Debug\net7.0\lab1.csproj.AssemblyReference.cache
+C:\Users\khodosevich\matvey\lab1\obj\Debug\net7.0\lab1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\khodosevich\matvey\lab1\obj\Debug\net7.0\lab1.AssemblyInfoInputs.cache
+C:\Users\khodosevich\matvey\lab1\obj\Debug\net7.0\lab1.AssemblyInfo.cs
+C:\Users\khodosevich\matvey\lab1\obj\Debug\net7.0\lab1.csproj.CoreCompileInputs.cache
+C:\Users\khodosevich\matvey\lab1\obj\Debug\net7.0\lab1.csproj.CopyComplete
+C:\Users\khodosevich\matvey\lab1\obj\Debug\net7.0\lab1.dll
+C:\Users\khodosevich\matvey\lab1\obj\Debug\net7.0\refint\lab1.dll
+C:\Users\khodosevich\matvey\lab1\obj\Debug\net7.0\lab1.pdb
+C:\Users\khodosevich\matvey\lab1\obj\Debug\net7.0\lab1.genruntimeconfig.cache
+C:\Users\khodosevich\matvey\lab1\obj\Debug\net7.0\ref\lab1.dll
