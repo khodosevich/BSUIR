@@ -1,16 +1,11 @@
-object Test1 {
-
-  def findDoubledConsonants(text: String): List[String] = {
-    val regex = """(?i)([b-df-hj-np-tv-z])\1""".r
-    regex.findAllIn(text).toList
-  }
+object Test2 {
 
   def main(args: Array[String]): Unit = {
 
-    val text = "matvey hee yy hello"
-    val doubledConsonants = findDoubledConsonants(text)
+    val originalString = "This"
+    val modifiedString = originalString.replaceAll("i", "")
 
-    println(s"Удвоенные согласные: $doubledConsonants")
+    println(modifiedString)
 
   }
 }
