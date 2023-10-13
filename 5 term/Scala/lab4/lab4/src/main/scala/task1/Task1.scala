@@ -12,7 +12,7 @@ object Task1 extends App {
 
   val stopWord = Set("world","In","the","From")
 
-  val wordsRDD = data.flatMap(l => l.split("\\s"))(encoder)
+  val wordsRDD = data.flatMap(l => l.split("\\s"))
 
   val filterData = wordsRDD.filter(word => !stopWord.contains(word))
 

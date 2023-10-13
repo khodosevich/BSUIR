@@ -9,12 +9,12 @@ object Task2 extends App{
 
   val data = spark.read.textFile("src/main/scala/task1/text")
 
-
   val wordsRDD = data.flatMap(l => l.split("\\s"))(encoder)
 
-  val filterData = wordsRDD.filter(word => word.startsWith("prog"))
+  val pattern = ".*\\b.*(?:prog).*\\b.*".r
 
-  filterData.foreach(el => println(el))
+  val filteredWordsRDD2 = wordsRDD.filter(word => pattern.pattern.matcher(word).matches())
 
+  filteredWordsRDD2.collect().foreach(println)
 
 }
