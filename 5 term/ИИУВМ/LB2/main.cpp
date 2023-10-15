@@ -1,5 +1,3 @@
-// Solodky, Shlapkov / 050502
-// Mar 2013
 #include <stdafx.h>
 #include "hexioctrl.h"
 #include "pci_codes.h"
