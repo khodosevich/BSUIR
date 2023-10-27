@@ -13,7 +13,7 @@ object Doptask2 extends App{
 
   val pattern = "\\W+"
 
-  val updatedWords = data.map(_.replaceAll(pattern, " "))
+  val updatedWords = data.map(_.replaceAll(pattern, " "))(encoder)
 
   updatedWords.collect().foreach(println)
 
