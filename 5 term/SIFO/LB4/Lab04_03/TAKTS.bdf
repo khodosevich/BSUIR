@@ -1,0 +1,396 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+//#pragma file_not_in_maxplusii_format
+(header "graphic" (version "1.3"))
+(pin
+	(input)
+	(rect 64 176 232 192)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "clk" (rect 5 0 19 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 696 64 872 80)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "takt[15..0]" (rect 90 0 140 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(symbol
+	(rect 464 40 592 344)
+	(text "lpm_decode0" (rect 26 1 116 17)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 288 25 300)(font "Arial" ))
+	(port
+		(pt 0 152)
+		(input)
+		(text "data[3..0]" (rect 0 0 53 14)(font "Arial" (font_size 8)))
+		(text "data[3..0]" (rect 20 146 73 160)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 16 152)(line_width 3))
+	)
+	(port
+		(pt 128 32)
+		(output)
+		(text "eq0" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "eq0" (rect 91 26 112 40)(font "Arial" (font_size 8)))
+		(line (pt 128 32)(pt 112 32)(line_width 1))
+	)
+	(port
+		(pt 128 48)
+		(output)
+		(text "eq1" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "eq1" (rect 91 42 112 56)(font "Arial" (font_size 8)))
+		(line (pt 128 48)(pt 112 48)(line_width 1))
+	)
+	(port
+		(pt 128 64)
+		(output)
+		(text "eq2" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "eq2" (rect 91 58 112 72)(font "Arial" (font_size 8)))
+		(line (pt 128 64)(pt 112 64)(line_width 1))
+	)
+	(port
+		(pt 128 80)
+		(output)
+		(text "eq3" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "eq3" (rect 91 74 112 88)(font "Arial" (font_size 8)))
+		(line (pt 128 80)(pt 112 80)(line_width 1))
+	)
+	(port
+		(pt 128 96)
+		(output)
+		(text "eq4" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "eq4" (rect 91 90 112 104)(font "Arial" (font_size 8)))
+		(line (pt 128 96)(pt 112 96)(line_width 1))
+	)
+	(port
+		(pt 128 112)
+		(output)
+		(text "eq5" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "eq5" (rect 91 106 112 120)(font "Arial" (font_size 8)))
+		(line (pt 128 112)(pt 112 112)(line_width 1))
+	)
+	(port
+		(pt 128 128)
+		(output)
+		(text "eq6" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "eq6" (rect 91 122 112 136)(font "Arial" (font_size 8)))
+		(line (pt 128 128)(pt 112 128)(line_width 1))
+	)
+	(port
+		(pt 128 144)
+		(output)
+		(text "eq7" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "eq7" (rect 91 138 112 152)(font "Arial" (font_size 8)))
+		(line (pt 128 144)(pt 112 144)(line_width 1))
+	)
+	(port
+		(pt 128 160)
+		(output)
+		(text "eq8" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "eq8" (rect 91 154 112 168)(font "Arial" (font_size 8)))
+		(line (pt 128 160)(pt 112 160)(line_width 1))
+	)
+	(port
+		(pt 128 176)
+		(output)
+		(text "eq9" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "eq9" (rect 91 170 112 184)(font "Arial" (font_size 8)))
+		(line (pt 128 176)(pt 112 176)(line_width 1))
+	)
+	(port
+		(pt 128 192)
+		(output)
+		(text "eq10" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "eq10" (rect 85 186 113 200)(font "Arial" (font_size 8)))
+		(line (pt 128 192)(pt 112 192)(line_width 1))
+	)
+	(port
+		(pt 128 208)
+		(output)
+		(text "eq11" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "eq11" (rect 85 202 113 216)(font "Arial" (font_size 8)))
+		(line (pt 128 208)(pt 112 208)(line_width 1))
+	)
+	(port
+		(pt 128 224)
+		(output)
+		(text "eq12" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "eq12" (rect 85 218 113 232)(font "Arial" (font_size 8)))
+		(line (pt 128 224)(pt 112 224)(line_width 1))
+	)
+	(port
+		(pt 128 240)
+		(output)
+		(text "eq13" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "eq13" (rect 85 234 113 248)(font "Arial" (font_size 8)))
+		(line (pt 128 240)(pt 112 240)(line_width 1))
+	)
+	(port
+		(pt 128 256)
+		(output)
+		(text "eq14" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "eq14" (rect 85 250 113 264)(font "Arial" (font_size 8)))
+		(line (pt 128 256)(pt 112 256)(line_width 1))
+	)
+	(port
+		(pt 128 272)
+		(output)
+		(text "eq15" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "eq15" (rect 85 266 113 280)(font "Arial" (font_size 8)))
+		(line (pt 128 272)(pt 112 272)(line_width 1))
+	)
+	(drawing
+		(line (pt 16 16)(pt 112 16)(line_width 1))
+		(line (pt 112 16)(pt 112 288)(line_width 1))
+		(line (pt 112 288)(pt 16 288)(line_width 1))
+		(line (pt 16 288)(pt 16 16)(line_width 1))
+	)
+)
+(symbol
+	(rect 280 152 424 216)
+	(text "lpm_counter0" (rect 33 1 125 17)(font "Arial" (font_size 10)))
+	(text "inst1" (rect 8 48 31 60)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clock" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "clock" (rect 26 26 55 40)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 144 40)
+		(output)
+		(text "q[3..0]" (rect 0 0 35 14)(font "Arial" (font_size 8)))
+		(text "q[3..0]" (rect 95 34 130 48)(font "Arial" (font_size 8)))
+		(line (pt 144 40)(pt 128 40)(line_width 3))
+	)
+	(drawing
+		(text "up counter" (rect 84 17 135 29)(font "Arial" ))
+		(line (pt 16 16)(pt 128 16)(line_width 1))
+		(line (pt 128 16)(pt 128 48)(line_width 1))
+		(line (pt 128 48)(pt 16 48)(line_width 1))
+		(line (pt 16 48)(pt 16 16)(line_width 1))
+		(line (pt 16 26)(pt 22 32)(line_width 1))
+		(line (pt 22 32)(pt 16 38)(line_width 1))
+	)
+)
+(connector
+	(pt 424 192)
+	(pt 464 192)
+	(bus)
+)
+(connector
+	(pt 232 184)
+	(pt 280 184)
+)
+(connector
+	(text "takt[0]" (rect 602 56 633 68)(font "Arial" ))
+	(pt 592 72)
+	(pt 640 72)
+)
+(connector
+	(text "takt[1]" (rect 602 72 633 84)(font "Arial" ))
+	(pt 592 88)
+	(pt 640 88)
+)
+(connector
+	(text "takt[2]" (rect 602 88 633 100)(font "Arial" ))
+	(pt 592 104)
+	(pt 640 104)
+)
+(connector
+	(text "takt[3]" (rect 602 104 633 116)(font "Arial" ))
+	(pt 592 120)
+	(pt 640 120)
+)
+(connector
+	(text "takt[4]" (rect 602 120 633 132)(font "Arial" ))
+	(pt 592 136)
+	(pt 640 136)
+)
+(connector
+	(text "takt[5]" (rect 602 136 633 148)(font "Arial" ))
+	(pt 592 152)
+	(pt 640 152)
+)
+(connector
+	(text "takt[6]" (rect 602 152 633 164)(font "Arial" ))
+	(pt 592 168)
+	(pt 640 168)
+)
+(connector
+	(text "takt[7]" (rect 602 168 633 180)(font "Arial" ))
+	(pt 592 184)
+	(pt 640 184)
+)
+(connector
+	(text "takt[8]" (rect 602 184 633 196)(font "Arial" ))
+	(pt 592 200)
+	(pt 640 200)
+)
+(connector
+	(text "takt[9]" (rect 602 200 633 212)(font "Arial" ))
+	(pt 592 216)
+	(pt 640 216)
+)
+(connector
+	(text "takt[10]" (rect 602 216 639 228)(font "Arial" ))
+	(pt 592 232)
+	(pt 640 232)
+)
+(connector
+	(text "takt[11]" (rect 602 232 639 244)(font "Arial" ))
+	(pt 592 248)
+	(pt 640 248)
+)
+(connector
+	(text "takt[12]" (rect 602 248 639 260)(font "Arial" ))
+	(pt 592 264)
+	(pt 640 264)
+)
+(connector
+	(text "takt[13]" (rect 602 264 639 276)(font "Arial" ))
+	(pt 592 280)
+	(pt 640 280)
+)
+(connector
+	(text "takt[14]" (rect 602 280 639 292)(font "Arial" ))
+	(pt 592 296)
+	(pt 640 296)
+)
+(connector
+	(text "takt[15]" (rect 602 296 639 308)(font "Arial" ))
+	(pt 592 312)
+	(pt 640 312)
+)
+(connector
+	(pt 640 72)
+	(pt 696 72)
+	(bus)
+)
+(connector
+	(pt 640 72)
+	(pt 640 88)
+	(bus)
+)
+(connector
+	(pt 640 88)
+	(pt 640 104)
+	(bus)
+)
+(connector
+	(pt 640 104)
+	(pt 640 120)
+	(bus)
+)
+(connector
+	(pt 640 120)
+	(pt 640 136)
+	(bus)
+)
+(connector
+	(pt 640 136)
+	(pt 640 152)
+	(bus)
+)
+(connector
+	(pt 640 152)
+	(pt 640 168)
+	(bus)
+)
+(connector
+	(pt 640 168)
+	(pt 640 184)
+	(bus)
+)
+(connector
+	(pt 640 184)
+	(pt 640 200)
+	(bus)
+)
+(connector
+	(pt 640 200)
+	(pt 640 216)
+	(bus)
+)
+(connector
+	(pt 640 216)
+	(pt 640 232)
+	(bus)
+)
+(connector
+	(pt 640 232)
+	(pt 640 248)
+	(bus)
+)
+(connector
+	(pt 640 248)
+	(pt 640 264)
+	(bus)
+)
+(connector
+	(pt 640 264)
+	(pt 640 280)
+	(bus)
+)
+(connector
+	(pt 640 280)
+	(pt 640 296)
+	(bus)
+)
+(connector
+	(pt 640 296)
+	(pt 640 312)
+	(bus)
+)
+(junction (pt 640 72))
+(junction (pt 640 88))
+(junction (pt 640 104))
+(junction (pt 640 120))
+(junction (pt 640 136))
+(junction (pt 640 152))
+(junction (pt 640 168))
+(junction (pt 640 184))
+(junction (pt 640 200))
+(junction (pt 640 216))
+(junction (pt 640 232))
+(junction (pt 640 248))
+(junction (pt 640 264))
+(junction (pt 640 280))
+(junction (pt 640 296))

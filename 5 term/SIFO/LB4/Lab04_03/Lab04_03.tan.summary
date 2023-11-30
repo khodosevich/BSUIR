@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.947 ns
+From           : clk
+To             : CONTROL:inst|lpm_dff2:inst10|lpm_ff:lpm_ff_component|dffs[2]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.893 ns
+From           : ROM:inst5|lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_c551:auto_generated|q_a[2]
+To             : data[2]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.670 ns
+From           : clk
+To             : data[0]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 4.336 ns
+From           : clk
+To             : CONTROL:inst|lpm_dff2:inst9|lpm_ff:lpm_ff_component|dffs[2]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 131.32 MHz ( period = 7.615 ns )
+From           : ROM:inst5|lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_c551:auto_generated|q_a[7]
+To             : CONTROL:inst|lpm_dff2:inst9|lpm_ff:lpm_ff_component|dffs[7]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : CONTROL:inst|TAKTS:inst|lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0]
+To             : ROM:inst5|lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_c551:auto_generated|ram_block1a0~porta_address_reg2
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 223
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 223
+
+--------------------------------------------------------------------------------------
+
