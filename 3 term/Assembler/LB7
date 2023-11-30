@@ -1,0 +1,247 @@
+.model small
+.data
+filename    db 80 dup(0)
+arguments   db 120 dup(0)
+numberTen   dw 000Ah
+
+;EXEC Parameter Block
+EPB         dw 0                    
+dw offset commandline, 0  
+dw 005Ch, 0, 006Ch, 0   
+commandline db 125
+db " /?"
+commandtext db 122 dup (?)
+
+numberString db 20 dup ('$')
+size        dw ?
+msg1        db 'Poehali!', 13, 10, '$'
+msg2        db 'Vvedite chislo: ', '$'
+err_msg     db 13,10,'Oshibka granic chisla$'
+erropen_msg db 13,10,"Don't open!", '$'
+errmem_msg  db 13,10,'Oshibka pamyati', '$'
+msg3        db 13,10,'Tblk any key$'
+dsize       dw $-filename
+
+.stack 256
+.code
+
+;???? ?????
+inputNumbers proc
+repeatElementInput:
+lea dx, numberString
+call inputString
+lea si, numberString[2]
+call parseString
+jc invalidInput
+call loadNumber
+loop inputNumbers
+ret
+
+invalidInput:
+jno tryAgainOutput
+tryAgainOutput:
+jmp repeatElementInput
+
+loadNumber:
+mov [di], ax
+add di, 2
+ret
+inputNumbers endp
+
+
+inputString proc
+mov ah, 0Ah
+int 21h
+ret
+inputString endp
+
+sizeInput proc
+lea di, size
+mov cx, 0001h
+call inputNumbers
+cmp ax, 255
+jg er
+cmp ax, 1
+jl er
+call loadNumber
+ret
+sizeInput endp
+
+
+get_name proc
+push ax 
+push cx
+push di
+push si
+xor cx, cx
+mov cl, es:[80h] 
+cmp cl, 0
+je endParse
+mov di, 82h       
+lea si, filename
+cicle1:
+mov al, es:[di]  
+cmp al, ' '     
+je end_get_name
+cmp al, 0Dh
+je endParse
+mov [si], al      
+inc di
+inc si
+jmp cicle1
+
+end_get_name:
+lea si, arguments
+mov [si], 0
+inc si
+inc di
+xor cl, cl
+cycle2:
+mov al, es:[di]
+cmp al, 0Dh
+je endParse
+mov [si], al
+inc di
+inc si
+inc cl
+jmp cycle2:
+
+endParse:
+dec si
+lea si, arguments
+dec cl
+mov [si], cl
+pop si            
+pop di
+pop cx
+pop ax
+ret
+get_name endp
+
+
+output macro str
+push dx
+push ax
+lea dx, str
+mov ah, 09h
+int 21h
+pop ax
+pop dx
+endm
+
+
+parseString proc
+xor dx, dx
+xor bx, bx
+xor ax, ax
+jmp inHaveSign
+parseStringLoop:
+mov bl, [si]  
+jmp isNumber
+validString:
+sub bl, '0'
+imul numberTen ;ax * 10
+jo invalidString         
+js invalidString          
+add ax, bx
+js invalidString          
+checkInvalid:
+inc si
+jmp parseStringLoop
+
+isNumber:
+cmp bl, 0Dh         
+je endParsing       
+cmp bl, '0'
+jl invalidString     
+cmp bl, '9'
+jg invalidString   
+jmp validString     
+
+inHaveSign:
+cmp [si], '-'
+je invalidString
+cmp [si], '+'
+jne isNullString
+inc si
+jmp isNullString
+
+negative:
+mov ch, 1
+inc si
+jmp isNullString
+
+isNullString:
+cmp [si], 0Dh
+je invalidString
+jmp parseStringLoop
+
+invalidString:
+xor ch, ch
+stc   ;CF = 1
+ret
+
+endParsing:
+cmp ax, 255
+jg invalidString
+cmp ax, 1
+jl invalidString
+
+clc  ;CF = 0
+mov size, ax
+ret
+parseString endp
+
+start:
+mov ax, @data
+mov ds, ax
+
+call get_name
+output msg1
+output msg2
+call sizeInput
+
+mov ax, 03
+int 10h
+
+
+mov sp, csize + 100h + 200h
+mov ah, 4ah   
+mov bx, (csize/16)+256/16+(dsize/16)+20
+int 21h        
+jc er
+
+mov ax, cs
+
+mov word ptr EPB+4, ax  
+;file control block
+mov word ptr EPB+8, ax  
+mov word ptr EPB+0Ch, ax 
+
+mov cx, size
+
+openProgram:
+mov ax, 4B00h      
+lea dx, filename    
+lea bx, epb        
+int 21h
+jc  erOpen
+loop openProgram
+
+ex:
+output msg3
+mov ah, 1                
+int 21h
+mov ax, 4c00h           
+int 21h
+er:
+output err_msg
+jmp ex
+erOpen:
+output erropen_msg
+jmp ex
+erMem:
+output errmem_msg
+jmp ex
+csize dw $-start
+end start

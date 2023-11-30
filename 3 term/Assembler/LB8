@@ -1,0 +1,165 @@
+.model tiny
+.stack 100h
+.code
+start: jmp init
+color db 07h
+videobuffOffset dw 0000h
+
+getClockRegisterData proc
+out 70h, al
+in al, 71h
+ret
+getClockRegisterData endp
+
+splitBCD proc
+mov bl, al
+and al, 0Fh
+add al, '0'
+shr bl, 4
+add bl, '0'
+ret
+splitBCD endp
+
+writeTimeToVideobuff proc
+mov es:[si], bx
+add si, 2
+mov es:[si], ax
+add si, 2
+ret
+writeTimeToVideobuff endp
+
+new70Handler proc far
+pusha
+mov ax, cs
+mov ds, ax
+mov ax, 0B800h
+mov es, ax
+mov si, videobuffOffset
+mov ah, color
+mov bh, ah
+
+mov al, 04h
+call getClockRegisterData
+call splitBCD
+call writeTimeToVideobuff
+mov es:[si], 073Ah
+add si, 2
+
+mov al, 02h
+call getClockRegisterData
+call splitBCD
+call writeTimeToVideobuff
+mov es:[si], 073Ah
+add si, 2
+
+mov al, 00h
+call getClockRegisterData
+call splitBCD
+call writeTimeToVideobuff
+odlInt:
+popa
+db 0EAh
+oldHandler dd ?
+new70Handler endp
+
+readPosition proc
+xor ax, ax
+xor bx, bx
+skipSpaces:
+cmp ds:di, 0Dh
+je readError
+cmp ds:di, ' '
+jne getWord
+inc di
+jmp skipSpaces
+getWord:
+mov al, ds:di
+inc di
+sub al, '0'
+
+mov bl, ds:di
+cmp bl, 0Dh
+je oneSymbol
+cmp bl, ' '
+je oneSymbol
+inc di
+sub bl, '0'
+mov bh, 0Ah
+mul bh
+add al, bl
+ret
+oneSymbol:
+ret
+readError:
+stc
+ret
+readPosition endp
+
+inputError:
+lea dx, invalidInputMessage
+mov ah, 09h
+int 21h
+jmp endProgram
+
+init:
+mov di, 81h
+lea si, commandLineData
+
+call readPosition
+jc inputError
+cmp ax, 0
+jl inputError
+cmp ax, 24
+jg inputError
+cmp ds:di, 0Dh
+je inputError
+
+mul columsNumber
+mov videobuffOffset, ax
+
+lea si, commandLineData
+call readPosition
+jc inputError
+cmp ax, 0
+jl inputError
+cmp ax, 72
+jg inputError
+
+cmp ds:di, 0Dh
+jne inputError
+
+add ax, videobuffOffset
+xor dx, dx
+mul bytesForSymbol
+mov videobuffOffset, ax
+
+mov ax, 351Ch
+int 21h
+mov  oldHandler, bx
+mov  oldHandler+2, es
+
+lea dx, new70Handler
+mov ax, 251Ch
+int 21h
+
+lea ax, readPosition
+sub ax, offset start
+add ax, 10fh
+xor dx, dx
+mov bx, 0010h
+div bx
+mov dx, ax
+mov ah, 31h
+int 21h
+
+endProgram:
+mov ax, 4c00h
+int 21h
+ends
+
+commandLineData db 2 dup(?)
+columsNumber db 80
+bytesForSymbol dw 2
+invalidInputMessage db "Input rows (0-24) and colums (0-72) where clock will be displayed.$"
+
+end start

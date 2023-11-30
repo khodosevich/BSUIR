@@ -1,0 +1,44 @@
+#include <iostream> 
+#pragma inline
+
+using namespace std;
+
+
+void main(){
+
+
+
+	int i = 0;
+
+	float array[10];
+	cout << "Enter 10 elements" << endl;
+
+	for (i = 0; i < 10; i++) {
+		cin >> array[i];
+	}
+
+	i = 0;
+
+	while (i < 10) {
+		float temp = array[i];
+		_asm {
+			finit
+			fld temp
+			fsin
+			fst temp
+			fwait
+		}
+		array[i] = temp;
+		i++;
+	}
+
+	i = 0;
+
+	cout << "Результат: " << endl;
+
+	for (i = 0; i < 10; i++) {
+		cout << "Sin [" << i << "] " << " elements of array: " << array[i] << endl;
+	}
+
+
+}
