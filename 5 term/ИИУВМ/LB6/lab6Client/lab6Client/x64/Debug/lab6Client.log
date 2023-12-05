@@ -1,0 +1,5 @@
+﻿  Client.cpp
+C:\Users\37544\OneDrive\Рабочий стол\lab6Client\lab6Client\Client.cpp(109,19): warning C4244: инициализация: преобразование "std::streamoff" в "int", возможна потеря данных
+C:\Users\37544\OneDrive\Рабочий стол\lab6Client\lab6Client\Client.cpp(111,17): warning C4244: инициализация: преобразование "std::streamoff" в "int", возможна потеря данных
+C:\Users\37544\OneDrive\Рабочий стол\lab6Client\lab6Client\Client.cpp(135): warning C4715: sendFile: значение возвращается не при всех путях выполнения
+  lab6Client.vcxproj -> C:\Users\37544\OneDrive\Рабочий стол\lab6Client\x64\Debug\lab6Client.exe
