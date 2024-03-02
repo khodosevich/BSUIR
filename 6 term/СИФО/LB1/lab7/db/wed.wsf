@@ -1,0 +1,5585 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+VECTOR("D:/bsiur/5/sifo/lab5/lab5.vwf")
+{
+	ZOOM{
+		ZBEGIN = 3363410277;
+		ZEND = 7100532809;
+		NUMERATOR = 960;
+		DENOMINATOR = 3737122532;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 0;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data";
+		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[7]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[6]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[5]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[4]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[3]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[2]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[1]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[0]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "req";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS";
+		INDEX = 15;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[4]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[3]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[2]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[1]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[0]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1";
+		INDEX = 21;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[7]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[6]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[5]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[4]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[3]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[2]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[1]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[0]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2";
+		INDEX = 30;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[7]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[6]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[5]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[4]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[3]";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[2]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[1]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[0]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3";
+		INDEX = 39;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[7]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[6]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[5]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[4]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[3]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[2]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[1]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[0]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "giveAccsess";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy55";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy44";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy33";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy22";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy11";
+		INDEX = 53;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/bsiur/5/sifo/lab5upd/lab5.vwf")
+{
+	ZOOM{
+		ZBEGIN = 5853767956;
+		ZEND = 8746232044;
+		NUMERATOR = 960;
+		DENOMINATOR = 2892464088;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 0;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data";
+		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[7]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[6]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[5]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[4]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[3]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[2]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[1]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[0]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "req";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS";
+		INDEX = 15;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[4]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[3]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[2]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[1]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[0]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1";
+		INDEX = 21;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[7]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[6]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[5]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[4]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[3]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[2]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[1]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[0]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2";
+		INDEX = 30;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[7]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[6]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[5]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[4]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[3]";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[2]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[1]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[0]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3";
+		INDEX = 39;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[7]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[6]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[5]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[4]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[3]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[2]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[1]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[0]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "giveAccsess";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy55";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy44";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy33";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy22";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy11";
+		INDEX = 53;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("C:/Users/Valentin/Downloads/lab5upd/lab5.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 8958771200;
+		NUMERATOR = 1367;
+		DENOMINATOR = 8958771200;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 0;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data";
+		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[7]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[6]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[5]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[4]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[3]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[2]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[1]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[0]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "req";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS";
+		INDEX = 15;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[4]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[3]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[2]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[1]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[0]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1";
+		INDEX = 21;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[7]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[6]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[5]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[4]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[3]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[2]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[1]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[0]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2";
+		INDEX = 30;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[7]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[6]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[5]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[4]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[3]";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[2]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[1]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[0]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3";
+		INDEX = 39;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[7]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[6]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[5]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[4]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[3]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[2]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[1]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[0]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "giveAccsess";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy44";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy33";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy22";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy11";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/”˜Â·‡ ¡√”»–/6 ÒÂÏÂÒÚ/—»‘Œ/lab5upd/lab5upd/lab5.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 25000;
+		NUMERATOR = 1050;
+		DENOMINATOR = 25000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 0;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data";
+		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[7]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[6]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[5]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[4]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[3]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[2]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[1]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[0]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "req";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS";
+		INDEX = 15;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[4]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[3]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[2]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[1]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[0]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1";
+		INDEX = 21;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[7]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[6]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[5]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[4]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[3]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[2]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[1]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[0]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2";
+		INDEX = 30;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[7]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[6]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[5]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[4]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[3]";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[2]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[1]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[0]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3";
+		INDEX = 39;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[7]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[6]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[5]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[4]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[3]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[2]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[1]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[0]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "giveAccsess";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy44";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy33";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy22";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy11";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/”˜Â·‡ ¡√”»–/6 ÒÂÏÂÒÚ/—»‘Œ/lab5upd/lab5upd/db/lab5.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 2182824618;
+		NUMERATOR = 1033;
+		DENOMINATOR = 2147483648;
+		TOP_INDEX = 13;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[4]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[3]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[2]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[1]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[0]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "req";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "giveAccsess";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy44";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy33";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy22";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy11";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 14;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data";
+		INDEX = 17;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[7]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[6]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[5]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[4]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[3]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[2]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[1]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[0]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1";
+		INDEX = 26;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[7]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[6]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[5]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[4]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[3]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[2]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[1]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[0]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2";
+		INDEX = 35;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[7]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[6]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[5]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[4]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[3]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[2]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[1]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[0]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3";
+		INDEX = 44;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[7]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[6]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[5]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[4]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[3]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[2]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[1]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[0]";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4";
+		INDEX = 53;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[7]";
+		INDEX = 54;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[6]";
+		INDEX = 55;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[5]";
+		INDEX = 56;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[4]";
+		INDEX = 57;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[3]";
+		INDEX = 58;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[2]";
+		INDEX = 59;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[1]";
+		INDEX = 60;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[0]";
+		INDEX = 61;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "req0";
+		INDEX = 62;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "req1";
+		INDEX = 63;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "req2";
+		INDEX = 64;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "req3";
+		INDEX = 65;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/”˜Â·‡ ¡√”»–/6 ÒÂÏÂÒÚ/—»‘Œ/LABS/lab7(1)/lab5upd/lab5.vwf")
+{
+	ZOOM{
+		ZBEGIN = 6165723862;
+		ZEND = 7971240662;
+		NUMERATOR = 1102;
+		DENOMINATOR = 1805516800;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[4]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[3]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[2]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[1]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[0]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 7;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "giveAccess";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy1";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy2";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy3";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy4";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data";
+		INDEX = 16;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[7]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[6]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[5]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[4]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[3]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[2]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[1]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[0]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1";
+		INDEX = 25;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[7]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[6]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[5]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[4]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[3]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[2]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[1]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[0]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2";
+		INDEX = 34;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[7]";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[6]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[5]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[4]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[3]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[2]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[1]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[0]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3";
+		INDEX = 43;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[7]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[6]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[5]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[4]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[3]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[2]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[1]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[0]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4";
+		INDEX = 52;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[7]";
+		INDEX = 53;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[6]";
+		INDEX = 54;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[5]";
+		INDEX = 55;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[4]";
+		INDEX = 56;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[3]";
+		INDEX = 57;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[2]";
+		INDEX = 58;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[1]";
+		INDEX = 59;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[0]";
+		INDEX = 60;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/”˜Â·‡ ¡√”»–/6 ÒÂÏÂÒÚ/—»‘Œ/LABS/lab7(1)/lab5upd/db/lab5.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 5159067177;
+		ZEND = 11569112125;
+		NUMERATOR = 1027;
+		DENOMINATOR = 6410044948;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[4]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[3]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[2]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[1]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[0]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 7;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "giveAccess";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy1";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy2";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy3";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy4";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data";
+		INDEX = 16;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[7]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[6]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[5]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[4]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[3]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[2]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[1]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[0]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1";
+		INDEX = 25;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[7]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[6]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[5]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[4]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[3]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[2]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[1]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[0]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2";
+		INDEX = 34;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[7]";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[6]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[5]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[4]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[3]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[2]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[1]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[0]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3";
+		INDEX = 43;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[7]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[6]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[5]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[4]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[3]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[2]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[1]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[0]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4";
+		INDEX = 52;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[7]";
+		INDEX = 53;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[6]";
+		INDEX = 54;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[5]";
+		INDEX = 55;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[4]";
+		INDEX = 56;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[3]";
+		INDEX = 57;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[2]";
+		INDEX = 58;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[1]";
+		INDEX = 59;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data4[0]";
+		INDEX = 60;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("C:/Users/manko/OneDrive/–‡·Ó˜ËÈ ÒÚÓÎ/lab7(1)/lab5upd/lab5.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 19278069760;
+		NUMERATOR = 984;
+		DENOMINATOR = 19278069760;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[4]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[3]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[2]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[1]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[0]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 7;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "giveAccess";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy1";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy2";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy3";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy4";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data";
+		INDEX = 16;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[7]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[6]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[5]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[4]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[3]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[2]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[1]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[0]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1";
+		INDEX = 25;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[7]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[6]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[5]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[4]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[3]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[2]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[1]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[0]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2";
+		INDEX = 34;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[7]";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[6]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[5]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[4]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[3]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[2]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[1]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[0]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3";
+		INDEX = 43;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[7]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[6]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[5]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[4]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[3]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[2]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[1]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[0]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy5";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("C:/Users/manko/OneDrive/–‡·Ó˜ËÈ ÒÚÓÎ/lab7(1)/lab5upd/db/lab5.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 21220180140;
+		NUMERATOR = 730;
+		DENOMINATOR = 21220180140;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[4]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[3]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[2]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[1]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[0]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 7;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "giveAccess";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy1";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy2";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy3";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy4";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy5";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data";
+		INDEX = 17;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[7]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[6]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[5]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[4]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[3]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[2]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[1]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[0]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1";
+		INDEX = 26;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[7]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[6]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[5]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[4]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[3]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[2]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[1]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[0]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2";
+		INDEX = 35;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[7]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[6]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[5]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[4]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[3]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[2]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[1]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[0]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3";
+		INDEX = 44;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[7]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[6]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[5]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[4]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[3]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[2]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[1]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[0]";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("C:/Users/“‡Ú¸ˇÌ‡/Desktop/¡√”»–/3_ ”–—/6Sem/lab5upd/lab5.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 13723238392;
+		NUMERATOR = 1047;
+		DENOMINATOR = 13723238392;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[4]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[3]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[2]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[1]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[0]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 7;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "giveAccess";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy1";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy2";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy3";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy4";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy5";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data";
+		INDEX = 17;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[7]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[6]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[5]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[4]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[3]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[2]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[1]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[0]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1";
+		INDEX = 26;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[7]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[6]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[5]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[4]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[3]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[2]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[1]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[0]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2";
+		INDEX = 35;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[7]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[6]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[5]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[4]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[3]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[2]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[1]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[0]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3";
+		INDEX = 44;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[7]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[6]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[5]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[4]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[3]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[2]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[1]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[0]";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("C:/Users/“‡Ú¸ˇÌ‡/Desktop/¡√”»–/3_ ”–—/6Sem/lab5upd/db/lab5.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 8082919424;
+		NUMERATOR = 783;
+		DENOMINATOR = 8082919424;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[4]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[3]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[2]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[1]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[0]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 7;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "giveAccess";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy1";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy2";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy3";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy4";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy5";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data";
+		INDEX = 17;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[7]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[6]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[5]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[4]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[3]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[2]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[1]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[0]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1";
+		INDEX = 26;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[7]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[6]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[5]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[4]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[3]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[2]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[1]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[0]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2";
+		INDEX = 35;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[7]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[6]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[5]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[4]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[3]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[2]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[1]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[0]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3";
+		INDEX = 44;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[7]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[6]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[5]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[4]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[3]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[2]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[1]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[0]";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("//Mac/Home/Desktop/lab5upd/db/lab5.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 1103792034;
+		NUMERATOR = 1000;
+		DENOMINATOR = 1103792034;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[4]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[3]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[2]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[1]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "REQS[0]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 7;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "giveAccess";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy1";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy2";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy3";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy4";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "busy5";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data";
+		INDEX = 17;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[7]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[6]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[5]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[4]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[3]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[2]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[1]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data[0]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1";
+		INDEX = 26;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[7]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[6]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[5]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[4]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[3]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[2]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[1]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data1[0]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2";
+		INDEX = 35;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[7]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[6]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[5]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[4]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[3]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[2]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[1]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data2[0]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3";
+		INDEX = 44;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[7]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[6]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[5]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[4]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[3]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[2]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[1]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "slave_data3[0]";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
