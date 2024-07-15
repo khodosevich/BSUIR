@@ -1,0 +1,116 @@
+r3:
+	ipv6 unicast-routing
+	e1/0: ipv6 address fdf8:1:3::1/64
+	no shut
+	e1/1: ipv6 address fdf8:1:2::1/64
+	loopback0: 
+		ipv6 address fdf8:1:b::1/64
+		ipv6 address 2002::1/128
+
+	ipv6 route ::/0 fdf8:1:2::2
+	ipv6 route fdf8:1:8::/64 fdf8:1:2::2
+	ipv6 route fdf8:1:9::/64 fdf8:1:2::2
+	ipv6 route fdf8:1:c::/64 fdf8:1:2::2
+	
+	write memory
+
+r1:
+	ipv6 unicast-routing
+	e1/0: ipv6 address fdf8:1:2::2/64
+	no shut
+	e1/2: ipv6 address fdf8:1:5::1/64
+	e1/1: ipv6 address fdf8:1:1::1/64
+
+	ipv6 route ::/0 fdf8:1:1::2
+	ipv6 route fdf8:1:8::/64 fdf8:1:1::2
+	ipv6 route fdf8:1:9::/64 fdf8:1:1::2
+	ipv6 route fdf8:1:c::/64 fdf8:1:1::2
+	ipv6 route fdf8:1:b::/64 fdf8:1:1::2
+
+	write memory
+
+r8:
+	ipv6 unicast-routing
+	e1/0: ipv6 address fdf8:1:1::2/64
+	no shut
+	e1/2: ipv6 address fdf8:1:a::1/64
+	e1/1: ipv6 address fdf8:1:7::1/64
+
+	ipv6 route ::/0 fdf8:1:7::2
+	ipv6 route fdf8:1:8::/64 fdf8:1:7::2
+	ipv6 route fdf8:1:9::/64 fdf8:1:7::2
+	ipv6 route fdf8:1:c::/64 fdf8:1:7::2
+	ipv6 route fdf8:1:b::/64 fdf8:1:7::2
+
+	write memory
+
+r5:
+	ipv6 unicast-routing
+	e1/0: ipv6 address fdf8:1:3::2/64
+	no shut
+	e1/2: ipv6 address fdf8:1:5::2/64
+	e1/1: ipv6 address fdf8:1:6::1/64
+
+	ipv6 route ::/0 fdf8:1:3::1
+	ipv6 route fdf8:1:8::/64 fdf8:1:6::2
+	ipv6 route fdf8:1:9::/64 fdf8:1:6::2
+	ipv6 route fdf8:1:c::/64 fdf8:1:6::2
+	ipv6 route fdf8:1:b::/64 fdf8:1:3::1
+
+	write memory
+
+r4:
+	ipv6 unicast-routing
+	e1/0: ipv6 address fdf8:1:6::2/64
+	no shut
+	e1/2: ipv6 address fdf8:1:a::2/64
+	e1/1: ipv6 address fdf8:1:4::1/64
+
+	ipv6 route ::/0 fdf8:1:6::1
+	ipv6 route fdf8:1:8::/64 fdf8:1:4::2
+	ipv6 route fdf8:1:9::/64 fdf8:1:4::2
+	ipv6 route fdf8:1:c::/64 fdf8:1:4::2
+	ipv6 route fdf8:1:b::/64 fdf8:1:6::1
+
+	write memory
+
+r2:
+	ipv6 unicast-routing
+	e1/0: ipv6 address fdf8:1:9::2/64
+	no shut
+	loopback0: 
+		ipv6 address fdf8:1:c::1/64
+		ipv6 address 2002::2/128
+
+	ipv6 route ::/0 fdf8:1:9::1
+	ipv6 route fdf8:1:b::/64 fdf8:1:9::1
+
+	write memory
+
+r6:
+	e1/0: ipv6 address fdf8:1:4::2/64
+	e1/1: ipv6 address fdf8:1:7::2/64
+	e1/2: ip address 10.0.0.1 255.255.255.0
+	tunnel0: ipv6 address fdf8:1:8::1/64
+
+	ipv6 route ::/0 fdf8:1:4::1
+	ipv6 route fdf8:1:9::/64 fdf8:1:8::2
+	ipv6 route fdf8:1:c::/64 fdf8:1:8::2
+	ipv6 route fdf8:1:b::/64 fdf8:1:4::1
+
+	tunnel source e1/2
+	tunnel destination 10.0.0.2
+	tunnel mode ipv6ip
+
+r7:
+	e1/1: ipv6 address fdf8:1:9::1/64
+	e1/0: ip address 10.0.0.2 255.255.255.0
+	tunnel0: ipv6 address fdf8:1:8::2/64
+
+	ipv6 route ::/0 fdf8:1:8::1
+	ipv6 route fdf8:1:c::/64 fdf8:1:9::2
+	ipv6 route fdf8:1:b::/64 fdf8:1:8::1
+
+	tunnel source e1/0
+	tunnel destination 10.0.0.1
+	tunnel mode ipv6ip
