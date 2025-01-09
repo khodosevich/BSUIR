@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<section name="com.ti.ccstudio.project.ui.internal.preferences.CodegenToolsPreferencePage">
-		<item value="C:\ti\ccsv7\tools\compiler\ti-cgt-c2000_21.6.1.LTS" key="ToolsPreferencePage.BROWSE_FILTER"/>
-	</section>
-</section>
