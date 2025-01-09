@@ -1,0 +1,13 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado_project/lab444/project_1/project_1.sim/sim_1/synth/func/xsim/counter_test_tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Divider_CLK
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-311] analyzing module jk
+INFO: [VRFC 10-311] analyzing module jk_0
+INFO: [VRFC 10-311] analyzing module jk_1
+INFO: [VRFC 10-311] analyzing module jk_2
+INFO: [VRFC 10-311] analyzing module lab4
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/vivado_project/lab444/project_1/project_1.srcs/sources_1/new/counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity counter
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/vivado_project/lab444/project_1/project_1.srcs/sources_1/new/jk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity jk

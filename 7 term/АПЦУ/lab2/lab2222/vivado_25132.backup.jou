@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Nov 16 10:57:07 2024
+# Process ID: 25132
+# Current directory: C:/Users/37544/OneDrive/Рабочий стол/lab2222
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25104 C:\Users\37544\OneDrive\Рабочий стол\lab2222\lab2222.xpr
+# Log file: C:/Users/37544/OneDrive/Рабочий стол/lab2222/vivado.log
+# Journal file: C:/Users/37544/OneDrive/Рабочий стол/lab2222\vivado.jou
+#-----------------------------------------------------------
+start_guioopen_project {C:/Users/37544/OneDrive/Рабочий стол/lab2222/lab2222.xpr}uupdate_compile_order -fileset sources_1launch_simulation
+source testBench.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_jk [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source test_jk.tcl
+close_sim
+close_sim

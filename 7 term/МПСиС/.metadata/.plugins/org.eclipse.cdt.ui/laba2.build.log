@@ -1,0 +1,7 @@
+
+**** Build of configuration Debug for project laba2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 8 all -O 
+gmake[1]: 'laba2.out' is up to date.
+
+**** Build Finished ****

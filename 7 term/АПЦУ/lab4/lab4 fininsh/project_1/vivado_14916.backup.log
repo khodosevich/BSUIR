@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Dec 17 16:18:06 2024
+# Process ID: 14916
+# Current directory: C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2752 C:\Users\37544\OneDrive\Рабочий стол\lab4 fininsh\project_1\project_1.xpr
+# Log file: C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1/vivado.log
+# Journal file: C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1/project_1.xpr}
+INFO: [Project 1-313] Project file moved from 'D:/vivado_project/lab444/project_1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 832.262 ; gain = 141.129
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Dec 17 16:18:43 2024] Launched synth_1...
+Run output will be captured here: C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Dec 17 16:20:24 2024] Launched synth_1...
+Run output will be captured here: C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1/project_1.runs/synth_1/runme.log
+close_project
+open_project {C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1/project_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Dec 17 16:21:05 2024] Launched synth_1...
+Run output will be captured here: C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1/project_1.runs/synth_1/runme.log
+[Tue Dec 17 16:21:05 2024] Launched impl_1...
+Run output will be captured here: C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Dec 17 16:22:22 2024] Launched synth_1...
+Run output will be captured here: C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1/project_1.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 17 16:28:03 2024...

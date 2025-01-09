@@ -1,0 +1,500 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Dec 17 13:45:12 2024
+# Process ID: 2320
+# Current directory: C:/BSUIR/7semestr/apcu/lab3/lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent60140 C:\BSUIR\7semestr\apcu\lab3\lab1\lab1.xpr
+# Log file: C:/BSUIR/7semestr/apcu/lab3/lab1/vivado.log
+# Journal file: C:/BSUIR/7semestr/apcu/lab3/lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 740.234 ; gain = 48.996
+update_compile_order -fileset sources_1
+set_property top Serial_sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Serial_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Serial_sim_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 238828417b85489ba6a952eb7db356df --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Serial_sim_behav xil_defaultlib.Serial_sim -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Serial_sim_behav -key {Behavioral:sim_1:Functional:Serial_sim} -tclbatch {Serial_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Serial_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /Serial_sim/input_buf was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Serial_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 799.965 ; gain = 13.195
+set_property top Serial_sim2 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Serial_sim2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Serial_sim2_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 238828417b85489ba6a952eb7db356df --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Serial_sim2_behav xil_defaultlib.Serial_sim2 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Serial_sim2_behav -key {Behavioral:sim_1:Functional:Serial_sim2} -tclbatch {Serial_sim2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Serial_sim2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /Serial_sim2/input_buf was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Serial_sim2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+set_property top Serial_sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+current_sim simulation_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 820.578 ; gain = 0.145
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Serial_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Serial_sim_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 238828417b85489ba6a952eb7db356df --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Serial_sim_behav xil_defaultlib.Serial_sim -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Serial_sim_behav -key {Behavioral:sim_1:Functional:Serial_sim} -tclbatch {Serial_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Serial_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /Serial_sim/input_buf was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Serial_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 820.578 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Serial_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Serial_sim_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Serial_sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 238828417b85489ba6a952eb7db356df --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Serial_sim_behav xil_defaultlib.Serial_sim -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.Serial [serial_default]
+Compiling architecture behavioral of entity xil_defaultlib.serial_sim
+Built simulation snapshot Serial_sim_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim/xsim.dir/Serial_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Dec 17 14:27:39 2024...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 823.262 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Serial_sim_behav -key {Behavioral:sim_1:Functional:Serial_sim} -tclbatch {Serial_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Serial_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /Serial_sim/input_buf was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+# run 1000ns
+Error: Ошибка: y0 не соответствует ожидаемому значению
+Time: 10 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Note: Значение y0 должно быть : '1'
+Time: 10 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Error: Ошибка: y4 не соответствует ожидаемому значению
+Time: 50 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Note: Значение y4 должно быть : '1'
+Time: 50 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Error: Ошибка: y2 не соответствует ожидаемому значению
+Time: 90 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Note: Значение y2 должно быть : '1'
+Time: 90 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Error: Ошибка: y6 не соответствует ожидаемому значению
+Time: 130 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Note: Значение y6 должно быть : '1'
+Time: 130 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Error: Ошибка: y1 не соответствует ожидаемому значению
+Time: 170 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Note: Значение y1 должно быть : '1'
+Time: 170 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Error: Ошибка: y5 не соответствует ожидаемому значению
+Time: 210 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Note: Значение y5 должно быть : '1'
+Time: 210 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Error: Ошибка: y3 не соответствует ожидаемому значению
+Time: 250 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Note: Значение y3 должно быть : '1'
+Time: 250 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Error: Ошибка: y7 не соответствует ожидаемому значению
+Time: 290 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Note: Значение y7 должно быть : '1'
+Time: 290 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Serial_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 825.914 ; gain = 2.652
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Serial_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Serial_sim_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Serial_sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 238828417b85489ba6a952eb7db356df --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Serial_sim_behav xil_defaultlib.Serial_sim -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.Serial [serial_default]
+Compiling architecture behavioral of entity xil_defaultlib.serial_sim
+Built simulation snapshot Serial_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Serial_sim_behav -key {Behavioral:sim_1:Functional:Serial_sim} -tclbatch {Serial_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Serial_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /Serial_sim/input_buf was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Serial_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 827.785 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Serial_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Serial_sim_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sources_1/new/Serial.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Serial
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 238828417b85489ba6a952eb7db356df --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Serial_sim_behav xil_defaultlib.Serial_sim -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.Serial [serial_default]
+Compiling architecture behavioral of entity xil_defaultlib.serial_sim
+Built simulation snapshot Serial_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Serial_sim_behav -key {Behavioral:sim_1:Functional:Serial_sim} -tclbatch {Serial_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Serial_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /Serial_sim/input_buf was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Serial_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 827.785 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Serial_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Serial_sim_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sources_1/new/Serial.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Serial
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 238828417b85489ba6a952eb7db356df --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Serial_sim_behav xil_defaultlib.Serial_sim -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.Serial [serial_default]
+Compiling architecture behavioral of entity xil_defaultlib.serial_sim
+Built simulation snapshot Serial_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Serial_sim_behav -key {Behavioral:sim_1:Functional:Serial_sim} -tclbatch {Serial_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Serial_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /Serial_sim/input_buf was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Serial_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 829.543 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Serial_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Serial_sim_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sources_1/new/Serial.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Serial
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 238828417b85489ba6a952eb7db356df --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Serial_sim_behav xil_defaultlib.Serial_sim -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.Serial [serial_default]
+Compiling architecture behavioral of entity xil_defaultlib.serial_sim
+Built simulation snapshot Serial_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Serial_sim_behav -key {Behavioral:sim_1:Functional:Serial_sim} -tclbatch {Serial_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Serial_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /Serial_sim/input_buf was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+# run 1000ns
+Error: Ошибка: y1 не соответствует ожидаемому значению
+Time: 290 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Note: Значение y1 должно быть : '0'
+Time: 290 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Serial_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 835.027 ; gain = 5.484
+set_property top Serial_sim2 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 17 14:35:02 2024...

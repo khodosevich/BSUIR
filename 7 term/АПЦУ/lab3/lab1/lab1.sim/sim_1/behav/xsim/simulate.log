@@ -1,0 +1,6 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+Error: Ошибка: y1 не соответствует ожидаемому значению
+Time: 290 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd
+Note: Значение y1 должно быть : '0'
+Time: 290 ns  Iteration: 0  Process: /Serial_sim/stimulus  File: C:/BSUIR/7semestr/apcu/lab3/lab1/lab1.srcs/sim_1/new/Serial_sim.vhd

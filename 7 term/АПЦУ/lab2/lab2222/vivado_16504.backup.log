@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Nov 18 22:30:06 2024
+# Process ID: 16504
+# Current directory: C:/Users/37544/OneDrive/Рабочий стол/lab2222
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17192 C:\Users\37544\OneDrive\Рабочий стол\lab2222\lab2222.xpr
+# Log file: C:/Users/37544/OneDrive/Рабочий стол/lab2222/vivado.log
+# Journal file: C:/Users/37544/OneDrive/Рабочий стол/lab2222\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/37544/OneDrive/Рабочий стол/lab2222/lab2222.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 763.012 ; gain = 74.594
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 18 23:27:06 2024...

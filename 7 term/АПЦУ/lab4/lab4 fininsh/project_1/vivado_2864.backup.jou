@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Dec 17 16:28:29 2024
+# Process ID: 2864
+# Current directory: C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15840 C:\Users\37544\OneDrive\Рабочий стол\lab4 fininsh\project_1\project_1.xpr
+# Log file: C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1/vivado.log
+# Journal file: C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/37544/OneDrive/Рабочий стол/lab4 fininsh/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1

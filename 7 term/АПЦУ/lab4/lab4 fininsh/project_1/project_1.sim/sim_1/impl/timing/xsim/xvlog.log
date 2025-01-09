@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado_project/lab444/project_1/project_1.sim/sim_1/impl/timing/xsim/counter_test_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Divider_CLK
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-311] analyzing module jk
+INFO: [VRFC 10-311] analyzing module jk_0
+INFO: [VRFC 10-311] analyzing module jk_1
+INFO: [VRFC 10-311] analyzing module jk_2
+INFO: [VRFC 10-311] analyzing module lab4
+INFO: [VRFC 10-311] analyzing module glbl

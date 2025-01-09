@@ -1,0 +1,1 @@
+"./CTS_HAL.obj" "./CTS_Layer.obj" "./HAL_AppUart.obj" "./HAL_Board.obj" "./HAL_Buttons.obj" "./HAL_Cma3000.obj" "./HAL_Dogs102x6.obj" "./HAL_FLASH.obj" "./HAL_Menu.obj" "./HAL_SDCard.obj" "./HAL_UCS.obj" "./HAL_Wheel.obj" "./ff.obj" "./main.obj" "./mmc.obj" "./structure.obj" "./syscall.obj" -llibmath.a -llibc.a 
